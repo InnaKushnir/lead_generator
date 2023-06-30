@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1 style="text-align: left">Lead Generator
+  </h1>
+  <br>
+  <h4>To get started, I need all the following information.</h4>
+
+  <form method="GET" action="{% url 'app:object-list' %}">
+  <div style="display: flex; flex-direction: column; align-items: flex-start;">
+
+    <div style="margin-bottom: 20px;">
+      <label for="id_keywords">Keywords:</label>
+      {{ search_form.category }}
+    </div>
+    <div style="margin-bottom: 20px;">
+      <label for="id_location">Location:</label>
+      {{ search_form.city }}
+    </div>
+    <div style="margin-bottom: 20px;">
+      <label for="id_leads_num">Leads Number:</label>
+      {{ search_form.count }}
+    </div>
+  </div>
+  <button type="submit">Submit</button>
+  </form>
+
+  {% if object_list %}
+      <table class="table table-hover">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>City</th>
+
+        </tr>
+        {% for object in object_list %}
+            <tr>
+                <td>
+                    {{object.id }}
+                </td>
+                <td>
+                    {{ object.name }}
+                </td>
+                <td>
+                    {{ object.category }}
+                </td>
+                <td>
+                    {{ object.city }}
+                </td>
+            </tr>
+        {% endfor %}
+      </table>
+
+  {% else %}
+    <p>There are no objects. </p>
+  {% endif %}
+{% endblock %}
