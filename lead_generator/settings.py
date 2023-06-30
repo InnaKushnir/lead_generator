@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "debug_toolbar",
     "app",
-
 ]
 
 MIDDLEWARE = [
@@ -62,8 +61,7 @@ ROOT_URLCONF = "lead_generator.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -87,11 +85,11 @@ AUTH_USER_MODEL = "app.User"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        'NAME': 'lead_generator',
-        'USER': 'lead_generator_user',
-        'PASSWORD': 'lead_generator_password',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        "NAME": "lead_generator",
+        "USER": "lead_generator_user",
+        "PASSWORD": "lead_generator_password",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 

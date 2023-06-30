@@ -17,10 +17,7 @@ class UserCreateView(generic.CreateView):
 def home(request):
     users = User.objects.all()
     num_users = users.count()
-    context = {
-        'num_users': num_users,
-        'users': users
-    }
+    context = {"num_users": num_users, "users": users}
     return render(request, "base.html", context)
 
 
@@ -50,6 +47,3 @@ class ObjectCreateView(generic.CreateView):
     model = Object
     fields = "__all__"
     success_url = reverse_lazy("app:object-list")
-
-
-

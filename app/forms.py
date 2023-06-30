@@ -6,7 +6,7 @@ from django import forms
 class UserCreateForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = UserCreationForm.Meta.fields + ('email', )
+        fields = UserCreationForm.Meta.fields + ("email",)
 
 
 class ObjectSearchForm(forms.Form):

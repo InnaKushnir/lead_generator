@@ -1,4 +1,3 @@
-
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
@@ -9,7 +8,6 @@ class User(AbstractUser):
 
 
 class Object(models.Model):
-
     class CategoryChoices(models.TextChoices):
         RESTAURANT = "RESTAURANT"
         HOTEL = "HOTEL"
@@ -35,4 +33,3 @@ class Object(models.Model):
 
     def __str__(self):
         return str(self.name)
-
