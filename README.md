@@ -19,7 +19,7 @@ Django Lead_generator management project.
 ```
 git clone  https://github.com/InnaKushnir/lead_generator.git
 
-cd my-project
+cd lead_generator
 
 python -m venv venv
 
